@@ -74,12 +74,12 @@ public class LatexGutter extends GenericGutter {
 		StringBuffer buf = new StringBuffer();
 		
 		String s = Integer.toString(lineNumber);
-		//buf.append("\\" + gutterStyle(lineNumber) + "{" ) ;
-		//for( int i=this.gutterSize - s.length(); i>=0; i--){
-		//	buf.append( "\\ ") ;
-		//}
+		buf.append("\\" + gutterStyle(lineNumber) + "{" ) ;
+		for( int i=this.gutterSize - s.length(); i>=0; i--){
+			buf.append( "\\ ") ; 
+		}
 		buf.append( s ) ;
-		//buf.append( this.gutterBorder + "}" ) ;
+		buf.append( this.gutterBorder + "}" ) ;
 		return buf.toString();
   }
            
@@ -101,8 +101,8 @@ public class LatexGutter extends GenericGutter {
 	@Override
 	public String style() {
     StringBuffer buf = new StringBuffer();
-		buf.append( "\\newcommand{\\gutter}[1]{\\llap{\\textcolor{black}{|\\ #1{|}\\ }}}\n" )  ;
-		buf.append( "\\newcommand{\\gutterH}[1]{\\llap{\\textcolor{red}{|\\ #1{|}\\ }}}\n" ) ;
+		buf.append( "\\newcommand{\\gutter}[1]{\\textcolor[rgb]{0,0,0}{{|}#1}}\n" )  ;
+		buf.append( "\\newcommand{\\gutterH}[1]{\\textcolor[rgb]{1,0,0}{{|}#1}}\n" ) ;
 		return buf.toString();
   }
 	

@@ -64,16 +64,12 @@ public class LatexDocument extends GenericDocument {
 		 */
     @Override
 		public void openBeforeStyle(Writer out) throws IOException {                      
-			out.write( "\\documentclass{article}      " + this.lineSeparator );
-			out.write( "\\usepackage{xcolor}          " + this.lineSeparator );
-			out.write( "\\usepackage{alltt}           " + this.lineSeparator );
-			out.write( "\\usepackage{hyperref}"+ this.lineSeparator );
-			out.write( "\\usepackage{fontspec}        % text fonts" + this.lineSeparator);
-			out.write( "\\usepackage{unicode-math}    % math fonts" + this.lineSeparator);
-			out.write( "\\setmainfont{Latin Modern Roman}" + this.lineSeparator);
-			out.write( "\\setmathfont{Latin Modern Math}" + this.lineSeparator);
-			out.write( "\\setmonofont{JetBrains Mono}" + this.lineSeparator);
-			out.write( "\\title{"+ this.title +"}"      + this.lineSeparator );
+			out.write( "\\documentclass{article}      " + this.lineSeparator ) ;
+			out.write( "\\usepackage{color}           " + this.lineSeparator ) ;
+			out.write( "\\usepackage{alltt}           " + this.lineSeparator ) ;
+			out.write( "\\usepackage[latin1]{inputenc}" + this.lineSeparator ) ;
+			out.write( "\\usepackage{hyperref}"         + this.lineSeparator ) ;
+			out.write( "\\title{"+ this.title +"}"      + this.lineSeparator ) ;
 		}		
 			
 		/** 
@@ -95,9 +91,9 @@ public class LatexDocument extends GenericDocument {
 		 */
 		@Override
 		public void beforeContent( Writer out ) throws IOException {
+				out.write( "\\noindent" + this.lineSeparator  ) ;
 				out.write( "\\ttfamily" + this.lineSeparator  ) ;
-				//out.write("\\syntax" + LatexStyle.getCleanStyle( 0 ) +"{}");
-			out.write( "\\noindent" + this.lineSeparator  ) ;
+				out.write("\\syntax" + LatexStyle.getCleanStyle( 0 ) +"{}");
     }
 
 		/** 
@@ -108,8 +104,8 @@ public class LatexDocument extends GenericDocument {
 		 */
 		@Override
 		public void afterContent( Writer out ) throws IOException {
-				//out.write( "\\mbox{}"         + this.lineSeparator ) ;
-				out.write( "\\normalfont"     + this.lineSeparator ) ;
+				out.write( "\\mbox{}"         + this.lineSeparator ) ; 
+				out.write( "\\normalfont"     + this.lineSeparator ) ; 
 		}
 		
 		/** 

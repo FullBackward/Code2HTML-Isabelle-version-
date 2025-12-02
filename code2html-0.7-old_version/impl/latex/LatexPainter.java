@@ -42,7 +42,7 @@ import code2html.generic.* ;
  */
 public class LatexPainter extends GenericPainter {
 	
-	private static final String NEWLINE = "\\hfill\\\\\n" ;
+	private static final String NEWLINE = "\\hspace*{\\fill}\\\\\n" ;
 	
 	/** 
 	 * Constructor for the painter

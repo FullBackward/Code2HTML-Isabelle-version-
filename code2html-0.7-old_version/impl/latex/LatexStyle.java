@@ -127,7 +127,7 @@ public class LatexStyle extends Style {
 		public static String getCleanStyle( String str ){
 			if( !map.isEmpty() && map.containsKey( str ) ){
 			} else {
-				String str_ = cleanStyle( str );
+				String str_ = cleanStyle( str ) ;
 				map.put( str, str_ ) ;
 			}
 			return map.get( str ) ;
