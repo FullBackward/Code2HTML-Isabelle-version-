@@ -19,3 +19,7 @@ Since this is an unofficial fix, installation involves replacing the Code2HTML J
 
 3. Restart Isabelle2025 to load the plugin. In the plugin manager, you should now see in the Author information, a new bracket that says: (updated by Xuanwei Ren).
    ![Screenshot 2025-12-03 at 11 00 03](https://github.com/user-attachments/assets/094b50a1-3454-41f4-abc9-ef65d082d994)
+
+## LaTeX generation example
+
+   ![Screenshot 2025-12-10 at 16 40 05](https://github.com/user-attachments/assets/6e8d9c59-6a9c-4208-bbfa-5cd458667250)
